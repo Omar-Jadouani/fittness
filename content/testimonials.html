@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="../css/testimonials.css">
+    <!--  -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="stylesheet" href="../Css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/images/logo.png">
+    <link rel="stylesheet" href="../static/css/bootstrapMW.css">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/muscle-map.css">
+    <link rel="stylesheet" href="../static/css/style-mobile.css">
+</head>
+<body>
+
+<!-- Start Header -->
+    <div class="header" id="header">
+        <div class="container">
+        <a class="logo" id="logo">Fitness</a>
+                <ul class="main-nav">
+                    <li><a id="contact">About Us</a></li>
+                    <li><a id="testimonials">Testimonials</a></li>
+                    <li><a id="blog">Blog</a>
+                    <li><a id="contact">Contact</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- End Header -->
+
+<!-- Start landing -->
+<div class="landing-page">
+    <div class="overlay"></div>
+    <div class="introduction-text">
+        <h1>Review<span>S</span></h1>
+        <p>It helps us understand overall customer satisfaction.</p>
+    </div>
+</div>
+
+<script>
+
+    // Random Backgound Option
+let backgroundOption = true;
+
+// Variable To Contol The Background Interval
+let backgroundInterval;
+
+// Check If there's Local Storage Random Background Item
+let backgroundLocalItem = localStorage.getItem("background_option"); 
+
+// Check If Random backround Local Storage Is Not Empty
+    if ( backgroundLocalItem !== null) {
+        if (backgroundLocalItem == 'true') {
+            
+            backgroundOption = true;
+        }
+        else {
+            backgroundOption = false;
+        }
+    }
+// Select Landing Page
+let landingPage = document.querySelector(".landing-page");
+    // Get Array Imgs
+let imgsArray = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+
+function ranndomizeImgs() {
+    if ( backgroundOption === true) {
+
+        backgroundInterval = setInterval(() => {
+            // Get Random Number
+             let randomNumber = Math.floor(Math.random() * imgsArray.length);
+            
+            // Change Background Image Url
+            landingPage.style.backgroundImage = 'url("../Images/' + imgsArray[randomNumber] + '")';
+            
+        }, 5000);
+    }
+};
+ranndomizeImgs();
+</script>
+
+<!-- End landing -->
+
+<!-- Start informations -->
+<div class="informations">
+    <!-- Start Features -->
+    <div class="features" id="features">
+        <div class="main-heading">
+            <h2>Features</h2>
+            <p>
+                easy navigation, attractive design, and relevant content
+            </p>
+          </div>
+        <div class="container1">
+            <div class="box quality">
+                <div class="img-holder"><img src="../Images/features-01.jpg" alt=""></div>
+                <h2>Quality</h2>
+                <p>A quality website is clean, well-organized, easy to navigate, clear/concise, modern (in terms of style and layout)</p>
+                <a href="#">More</a>
+            </div>
+            <div class="box time">
+                <div class="img-holder"><img src="../Images/features-02.jpg" alt=""></div>
+                <h2>Time</h2>
+                <p>Unique content. Content is unique both within the website itself
+                    clear/concise, modern (in terms of style and layout)
+                </p>
+                <a href="#">More</a>
+            </div>
+            <div class="box passion">
+                <div class="img-holder"><img src="../Images/features-03.jpg" alt=""></div>
+                <h2>Passion</h2>
+                <p>Bodybuilding keeps your body and muscle strong and flexible
+                    clear/concise, modern (in terms of style and layout)
+                </p>
+                <a href="#">More</a>
+            </div>
+        </div>
+    </div>
+<!-- End Features -->
+
+<!-- Start Testimonials -->
+<div class="testimonials" id="testimonials">
+    <div class="main-heading">
+        <h2>Client's Feedback</h2>
+        <p>
+            easy navigation, attractive design, and relevant content
+        </p>
+      </div>
+    <div class="container1">
+        <div class="box">
+            <img src="../Images/avatar-01.png" alt="">
+            <h3>Mark zuckerberg</h3>
+            <span class="title">Special client from US</span>
+            <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur
+                delectus sequi! Possimus aspernatur asperiores at id.</p>
+        </div>
+        <div class="box">
+            <img src="../Images/avatar-02.png" alt="">
+            <h3>Daniel craig</h3>
+            <span class="title">Special client from US</span>
+            <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur
+                delectus sequi! Possimus aspernatur asperiores at id.</p>
+        </div>
+        <div class="box">
+            <img src="../Images/avatar-03.png" alt="">
+            <h3>louis pasteur</h3>
+            <span class="title">Special client from US</span>
+            <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur
+                delectus sequi! Possimus aspernatur asperiores at id.</p>
+        </div>
+        <div class="box">
+            <img src="../Images/avatar-04.png" alt="">
+            <h3>rafail noica</h3>
+            <span class="title">Special client from US</span>
+            <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur
+                delectus sequi! Possimus aspernatur asperiores at id.</p>
+        </div>
+        <div class="box">
+            <img src="../Images/avatar-05.png" alt="">
+            <h3>Ahmed alawi</h3>
+            <span class="title">Special client from US</span>
+            <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur
+                delectus sequi! Possimus aspernatur asperiores at id.</p>
+        </div>
+        <div class="box">
+            <img src="../Images/avatar-06.png" alt="">
+            <h3>Mohamed alamo</h3>
+            <span class="title">Special client from US</span>
+            <div class="rate">
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="filled fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur
+                delectus sequi! Possimus aspernatur asperiores at id.</p>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials -->
+</div>
+<!-- End informations -->
+
+
+    <!--    Start Footer -->
+    <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                  . Ex dolorem ducimus qui nisi ipsam, porro ipsum repellendus recusandae pariatur id
+                   veritatis assumenda dolor nesciunt suscipit eaque non earum atque. Fuga.</p>
+              <div class="social">
+                <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+                <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">Morroco, Marrakech</span>
+              </div>
+              <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+2126-76500</span>
+              </div>
+              <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">abc@example.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="center">
+            <span class="credit">Created By <a href="https://www.Omar_jadouani.com">OmarJadouani</a> | </span>
+            <span class="far fa-copyright"></span><span> 2022 All rights reserved.</span>
+          </div>
+        </div>
+      </footer>
+    <!--    End Footer -->
+    
+    <script src="../jquery-3.6.0.slim.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/contact.css">
+    <!--  -->
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="stylesheet" href="../Css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/images/logo.png">
+    <link rel="stylesheet" href="../static/css/bootstrapMW.css">
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/muscle-map.css">
+    <link rel="stylesheet" href="../static/css/style-mobile.css">
+</head>
+<body>
+
+<!-- Start Header -->
+    <div class="header" id="header">
+        <div class="container">
+        <a class="logo" id="logo">Fitness</a>
+                <ul class="main-nav">
+                    <li><a id="about">About Us</a></li>
+                    <li><a id="testimonials">testimonials</a></li>
+                    <li><a id="blog">Blog</a>
+                    <li><a id="contact">Contact</a></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- End Header -->
+
+<!-- Start landing -->
+<div class="landing-page">
+    <div class="overlay"></div>
+    <div class="introduction-text">
+        <h1>Connect <span>with</span> Us</h1>
+        <p>We won’t hold you hostage like other fitness clubs, you’ll want to stay because we care! pureley functional need for a controlls environment to moderate the effects of climate.</p>
+    </div>
+</div>
+
+<script>
+
+    // Random Backgound Option
+let backgroundOption = true;
+
+// Variable To Contol The Background Interval
+let backgroundInterval;
+
+// Check If there's Local Storage Random Background Item
+let backgroundLocalItem = localStorage.getItem("background_option"); 
+
+// Check If Random backround Local Storage Is Not Empty
+    if ( backgroundLocalItem !== null) {
+        if (backgroundLocalItem == 'true') {
+            
+            backgroundOption = true;
+        }
+        else {
+            backgroundOption = false;
+        }
+    }
+// Select Landing Page
+let landingPage = document.querySelector(".landing-page");
+    // Get Array Imgs
+let imgsArray = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+
+function ranndomizeImgs() {
+    if ( backgroundOption === true) {
+
+        backgroundInterval = setInterval(() => {
+            // Get Random Number
+             let randomNumber = Math.floor(Math.random() * imgsArray.length);
+            
+            // Change Background Image Url
+            landingPage.style.backgroundImage = 'url("../Images/' + imgsArray[randomNumber] + '")';
+            
+        }, 5000);
+    }
+};
+ranndomizeImgs();
+</script>
+
+<!-- End landing -->
+
+<!-- Start informations -->
+<div class="main-heading">
+    <h2>Contact Us</h2>
+    <p>
+      We are your personal trainer, 
+      Working with an online coach is less expensive than an in-person coach
+    </p>
+  </div>
+<div class="informations">
+            <!-- Start Timeline -->
+            <div class="timeline">
+                <h3 class="title">Platform Timeline</h3>
+                <div class="container">
+                    <div class="timeline-content">
+                        <div class="year">2020</div>
+
+                        <div class="left">
+                            <div class="content">
+                                <h3>Testing Heading</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non dignissimos cumque et iure dolorem doloribus eos deserunt quo corporis, ut fugiat eum rerum recusandae quisquam repellat sequi architecto ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="right">
+                            <div class="content">
+                                <h3>Testing Heading</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non dignissimos cumque et iure dolorem doloribus eos deserunt quo corporis, ut fugiat eum rerum recusandae quisquam repellat sequi architecto ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <div class="year">2021</div>
+
+                        <div class="left">
+                            <div class="content">
+                                <h3>Testing Heading</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non dignissimos cumque et iure dolorem doloribus eos deserunt quo corporis, ut fugiat eum rerum recusandae quisquam repellat sequi architecto ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="left">
+                            <div class="content">
+                                <h3>Testing Heading</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non dignissimos cumque et iure dolorem doloribus eos deserunt quo corporis, ut fugiat eum rerum recusandae quisquam repellat sequi architecto ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="year">2022</div>
+                        <div class="clearfix"></div>
+                        <div class="right">
+                            <div class="content">
+                                <h3>Testing Heading</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non dignissimos cumque et iure dolorem doloribus eos deserunt quo corporis, ut fugiat eum rerum recusandae quisquam repellat sequi architecto ipsum.</p>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        <!-- End Timeline -->
+</div>
+<!-- End informations -->
+
+    <!-- start Contact Us -->
+    <div class="contact">
+        <div class="container">
+            <div class="main-heading">
+                <h2>Write to Us</h2>
+                <p>
+                    Get in touch with us for inquiries or business proposals.we'll get back to you!
+                </p>
+            </div>
+            <div class="content">
+                <form action="">
+                    <input class="main-input" type="text" name="name" placeholder="Your Name">
+                    <input class="main-input" type="email" name="mail" placeholder="Your Email">
+                    <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+                <div class="info">
+                    <h4>Get In Touch</h4>
+                    <span class="phone">+2126-76500</span>
+                    <span class="phone">abc@example.com</span>
+                    <h4>Where We Are</h4>
+                    <address>Awesome Address 17<br>Marrakech<br>123-4567-890<br>Morroco</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Contact -->
+    <!--    Start Footer -->
+    <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                  . Ex dolorem ducimus qui nisi ipsam, porro ipsum repellendus recusandae pariatur id
+                   veritatis assumenda dolor nesciunt suscipit eaque non earum atque. Fuga.</p>
+              <div class="social">
+                <a href="https://facebook.com/coding.np"><span class="fab fa-facebook-f"></span></a>
+                <a href="#"><span class="fab fa-twitter"></span></a>
+                <a href="https://instagram.com/coding.np"><span class="fab fa-instagram"></span></a>
+                <a href="https://youtube.com/c/codingnepal"><span class="fab fa-youtube"></span></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <span class="fas fa-map-marker-alt"></span>
+                <span class="text">Morroco, Marrakech</span>
+              </div>
+              <div class="phone">
+                <span class="fas fa-phone-alt"></span>
+                <span class="text">+2126-76500</span>
+              </div>
+              <div class="email">
+                <span class="fas fa-envelope"></span>
+                <span class="text">abc@example.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required>
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="center">
+            <span class="credit">Created By <a href="https://www.Omar_jadouani.com">OmarJadouani</a> | </span>
+            <span class="far fa-copyright"></span><span> 2022 All rights reserved.</span>
+          </div>
+        </div>
+      </footer>
+    <!--    End Footer -->
+    <script src="../jquery-3.6.0.slim.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
